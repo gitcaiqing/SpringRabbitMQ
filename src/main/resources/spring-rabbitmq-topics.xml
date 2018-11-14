@@ -14,7 +14,7 @@
  	<!-- channel-cache-size，channel的缓存数量，默认值为25 -->
  	<!-- cache-mode，缓存连接模式，默认值为CHANNEL(单个connection连接，连接之后关闭，自动销毁) -->
  	<rabbit:connection-factory id="connectionFactory" host="${rmq.host}" port="${rmq.port}"
- 		username="${rmq.user}" password="${rmq.password}" virtual-host="/" channel-cache-size="${rmq.channelCacheSize}" cache-mode="CHANNEL"/>
+ 		username="${rmq.user}" password="${rmq.password}" virtual-host="${rmq.virtual}" channel-cache-size="${rmq.channelCacheSize}" cache-mode="CHANNEL"/>
  	<rabbit:admin connection-factory="connectionFactory"/>
  
  	<!--
