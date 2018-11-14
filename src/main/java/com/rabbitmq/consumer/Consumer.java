@@ -14,6 +14,6 @@ public class Consumer implements MessageListener{
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		System.out.println("路由模式消费者消费："+msg);
+		System.out.println("消费者消费："+msg);
 	}
 }

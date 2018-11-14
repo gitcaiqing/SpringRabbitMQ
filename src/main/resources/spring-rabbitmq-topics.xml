@@ -52,7 +52,7 @@
 	<!-- 生产者 -->
 	<bean id="producter" class="com.rabbitmq.producter.Producter">
 		<constructor-arg name="rabbitTemplate" ref="rabbitTemplate"/>
-		<constructor-arg name="routekey" value="china.news.info"/>
+		<constructor-arg name="routekey" value="china.news"/>
 	</bean>
 	
 	<!-- 消费者  -->
