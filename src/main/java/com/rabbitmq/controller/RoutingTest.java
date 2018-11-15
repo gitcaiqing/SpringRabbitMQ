@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.rabbitmq.producter.Producter;
 
+//路由模式测试
 public class RoutingTest {
 	
 	public static void main(String[] args) {

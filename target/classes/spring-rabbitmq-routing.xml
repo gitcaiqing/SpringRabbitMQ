@@ -2,9 +2,12 @@
     xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xmlns:rabbit="http://www.springframework.org/schema/rabbit"
-	xsi:schemaLocation="http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit-1.4.xsd
-	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
-	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+	xsi:schemaLocation="http://www.springframework.org/schema/rabbit 
+	http://www.springframework.org/schema/rabbit/spring-rabbit-1.4.xsd
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 	<description>Spring RabbitMQ 路由模式（Routing）配置</description>
 	
 	<!--引入配置属性文件 -->
@@ -14,7 +17,8 @@
  	<!-- channel-cache-size，channel的缓存数量，默认值为25 -->
  	<!-- cache-mode，缓存连接模式，默认值为CHANNEL(单个connection连接，连接之后关闭，自动销毁) -->
  	<rabbit:connection-factory id="connectionFactory" host="${rmq.host}" port="${rmq.port}"
- 		username="${rmq.user}" password="${rmq.password}" virtual-host="${rmq.virtual}" channel-cache-size="${rmq.channelCacheSize}" cache-mode="CHANNEL"/>
+ 		username="${rmq.user}" password="${rmq.password}" virtual-host="${rmq.virtual}" 
+ 		channel-cache-size="${rmq.channelCacheSize}" cache-mode="CHANNEL"/>
  	<rabbit:admin connection-factory="connectionFactory"/>
  
  	<!--
@@ -43,7 +47,7 @@
  	</rabbit:direct-exchange>
  	
  	<!-- spring template声明 -->
- 	<rabbit:template id="rabbitTemplate" connection-factory="connectionFactory" exchange="SpringRabbit-Direct-Exchange"></rabbit:template>
+ 	<rabbit:template id="rabbitTemplate" connection-factory="connectionFactory" exchange="SpringRabbit-Direct-Exchange"/>
 
 	<!-- 生产者 -->
 	<bean id="producter" class="com.rabbitmq.producter.Producter">
