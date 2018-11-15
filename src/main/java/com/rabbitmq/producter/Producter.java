@@ -2,6 +2,7 @@ package com.rabbitmq.producter;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
+//生产者
 public class Producter {
 
 	private RabbitTemplate rabbitTemplate;
