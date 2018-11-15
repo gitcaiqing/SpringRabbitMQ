@@ -33,7 +33,7 @@
        	<groupId>org.springframework.amqp</groupId>
        	<artifactId>spring-rabbit</artifactId>
        	<version>1.4.0.RELEASE</version>
-       </dependency> 
+    </dependency> 
    
    	<!-- spring核心依赖 -->
    	<dependency>

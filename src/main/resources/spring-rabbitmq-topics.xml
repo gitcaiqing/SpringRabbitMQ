@@ -58,7 +58,8 @@
 	<!-- 消费者  -->
  	<bean id="consumer" class="com.rabbitmq.consumer.Consumer"/>
 	<!-- 队列监听-->
- 	<rabbit:listener-container connection-factory="connectionFactory">
+	<!-- acknowledge：auto 自动确认(默认), manual手动确认 -->
+ 	<rabbit:listener-container connection-factory="connectionFactory" acknowledge="auto">
  		<rabbit:listener queues="queue" ref="consumer"/>
  	</rabbit:listener-container>
  	
